@@ -12,6 +12,10 @@ logging.basicConfig(level=logging.DEBUG)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# Ensure the uploads folder exists
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
 @app.route("/", methods=["GET"])
 def home():
     return render_template("index.html")
@@ -50,4 +54,4 @@ def verify_faces():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
