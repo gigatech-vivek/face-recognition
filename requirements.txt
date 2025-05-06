@@ -1,6 +1,6 @@
-Flask==2.2.2
+Flask==2.3.3
+Werkzeug==2.3.7
 DeepFace==0.0.93
 tensorflow==2.15.0
 opencv-python-headless==4.7.0.72
 gunicorn==20.1.0
-Werkzeug==2.3.7
