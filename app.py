@@ -2,6 +2,7 @@ import logging
 from flask import Flask, request, jsonify, render_template
 import os
 from deepface import DeepFace
+from urllib.parse import quote as url_quote
 
 app = Flask(__name__)
 
