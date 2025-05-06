@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Face Verification</title>
+</head>
+<body>
+  <h1>Upload Two Images for Face Verification</h1>
+  <form action="/verify" method="post" enctype="multipart/form-data">
+    <label for="image1">Image 1:</label>
+    <input type="file" name="image1" required><br><br>
+
+    <label for="image2">Image 2:</label>
+    <input type="file" name="image2" required><br><br>
+
+    <button type="submit">Verify Faces</button>
+  </form>
+</body>
+</html>
